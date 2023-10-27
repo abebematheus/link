@@ -62,5 +62,22 @@ ul li a{
 
     text-decoration: none;
     font-weight: 500px;
+    
+    transition: background 0.2s;
 
+    
+}
+
+ul li a:hover {
+    background: rgba(255, 255 , 255, 0.05);
+    border: 1.5px solid white;
+}
+
+/*ocial*/
+#ocial-links
+{
+    display: flex;
+    gap: 16px;
+
+    padding: 24px 0px;
 }
