@@ -3,20 +3,46 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*light mode*/
 :root{
     --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgb(255, 255, 255, 0.5);
+    --surface: rgb(255, 255, 255, 0.1);
+    --surface-hover: rgb(0, 0, 0, 0.02);
+    --highlight-color: rgb(255, 255, 255, 0.2);
+    --logo-switch: url(./assets/MoonStars.svg);
+
+    
+}
+
+/*dark mode*/
+.dark{
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgb(0, 0, 0, 0.5);
+    --surface: rgb(0, 0, 0, 0.05);
+    --surface-hover: rgb(0, 0, 0, 0.02);
+    --highlight-color: rgb(0, 0, 0, 0.1);
+    --logo-switch: url(./assets/Sun.svg);
+
+
+
+
 }
 
 body {
-    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    background: var(--bg-url) no-repeat top center/cover;
+
 
 }
 
 body * {
     font-family: 'Inter', sans-serif;
-    color: white;
+    color: var(--text-color);
 }
+
+/*profile*/
 
 #container {
     width: 360px;
@@ -41,6 +67,29 @@ body * {
    margin-top: 8px;
 }
 
+/*switch*/
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    background-image: var(--logo-switch);
+
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface);
+    border: 1px solid var(--stroke-color);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+
+}
+
 /*Links*/
 ul{
     list-style: none;
@@ -58,8 +107,8 @@ ul li a{
 
     padding: 16px 24px;
 
-    background: rgba(255, 255 , 255, 0.1);
-    border: 1px solid rgb(255, 255, 255, 0.5);
+    background: var(--surface);
+    border: 1px solid var(--stroke-color);
     border-radius: 8px;
 
     backdrop-filter: blur(4px);
@@ -74,11 +123,11 @@ ul li a{
 }
 
 ul li a:hover {
-    background: rgba(255, 255 , 255, 0.05);
-    border: 1.5px solid white;
+    background: var(--surface-hover);
+    border: 1.5px solid var(--text-color);
 }
 
-/*ocial*/
+/*social*/
 #social-links
 {
     display: flex;
@@ -101,7 +150,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-    background: rgb(255, 255, 255, 0.2);
+    background: var(--highlight-color);
 
 }
 
