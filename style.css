@@ -79,22 +79,27 @@ body * {
 #switch button{
     width: 32px;
     height: 32px;
-    background: white no-repeat center;
+    background: white var(--logo-switch) no-repeat center;
     border: 0;
     border-radius: 50%;
-    background-image: var(--logo-switch);
 
     position: absolute;
     z-index: 1;
     transform: translateY(-50%);
     top: 50%;
     left: 0;
+
+    animation: slide-back 0.4s;
+
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
 }
 
 .dark #switch button
 {
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
 
 }
 
@@ -106,6 +111,7 @@ body * {
     border: 1px solid var(--stroke-color);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px; 
+    backdrop-filter: blur(4px);
 
 }
 
@@ -192,4 +198,23 @@ footer{
     }
 
 
+}
+
+/*animação*/
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left:50%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+    to {
+        left:0;
+    }
 }
