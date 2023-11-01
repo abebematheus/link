@@ -21,7 +21,7 @@
     --text-color: black;
     --bg-url: url(./assets/bg-mobile-light.jpg);
     --stroke-color: rgb(0, 0, 0, 0.5);
-    --surface: rgb(0, 0, 0, 0.05);
+    --surface: rgba(56, 52, 52, 0.09);
     --surface-hover: rgb(0, 0, 0, 0.02);
     --highlight-color: rgb(0, 0, 0, 0.1);
     --logo-switch: url(./assets/Sun.svg);
@@ -129,6 +129,9 @@ ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
+    font-weight:bolder;
+    
 
     padding: 16px 24px;
 
@@ -137,7 +140,7 @@ ul li a{
     border-radius: 8px;
 
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(8px);
 
     text-decoration: none;
     font-weight: 500px;
