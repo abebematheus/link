@@ -9,10 +9,10 @@ function toggleMode() {
    //substituir a img
    if(html.classList.contains('dark')){
    //se tiver dark mode, adicona a imagem dark
-   img.setAttribute('src', './assets/avatar-light.png')
+   img.setAttribute('src', './assets/avatar.png')
    } else{
       // se tiver sem dark mode, mantem a imagem padrao
-      img.setAttribute('src', './assets/avatar.png')
+      img.setAttribute('src', './assets/avatar-light.png')
    }
 
    //pegar a tag img

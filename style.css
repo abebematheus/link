@@ -5,21 +5,11 @@
 }
 /*light mode*/
 :root{
-    --text-color: white;
-    --bg-url: url(./assets/bg-mobile.jpg);
-    --stroke-color: rgb(255, 255, 255, 0.5);
-    --surface: rgba(255, 255, 255, 0.048);
-    --surface-hover: rgb(0, 0, 0, 0.02);
-    --highlight-color: rgb(255, 255, 255, 0.2);
-    --logo-switch: url(./assets/MoonStars.svg);
-    --back-color: rgb(0, 0, 0);
-
-
     
-}
 
-/*dark mode*/
-.dark{
+
+    /* aaa */
+
     --text-color: black;
     --bg-url: url(./assets/bg-mobile-light.jpg);
     --stroke-color: rgb(0, 0, 0, 0.5);
@@ -28,6 +18,22 @@
     --highlight-color: rgb(0, 0, 0, 0.1);
     --logo-switch: url(./assets/Sun.svg);
     --back-color: white;
+}
+
+/*dark mode*/
+.dark{
+ 
+
+    /* aaa */
+
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgb(255, 255, 255, 0.5);
+    --surface: rgba(255, 255, 255, 0.048);
+    --surface-hover: rgb(0, 0, 0, 0.02);
+    --highlight-color: rgb(255, 255, 255, 0.2);
+    --logo-switch: url(./assets/MoonStars.svg);
+    --back-color: rgb(0, 0, 0);
 
 }
 
