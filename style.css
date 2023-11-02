@@ -11,13 +11,13 @@
     /* aaa */
 
     --text-color: black;
-    --bg-url: url(./assets/bg-mobile-light.jpg);
     --stroke-color: rgb(0, 0, 0, 0.5);
     --surface: rgba(255, 255, 255, 0.39);
     --surface-hover: rgb(0, 0, 0, 0.02);
     --highlight-color: rgb(0, 0, 0, 0.1);
     --logo-switch: url(./assets/Sun.svg);
-    --back-color: white;
+    --back-color: rgb(243, 238, 235);
+    --outline: rgba(243, 239, 239, 0.479);
 }
 
 /*dark mode*/
@@ -27,13 +27,15 @@
     /* aaa */
 
     --text-color: white;
-    --bg-url: url(./assets/bg-mobile.jpg);
     --stroke-color: rgb(255, 255, 255, 0.5);
     --surface: rgba(255, 255, 255, 0.048);
     --surface-hover: rgb(0, 0, 0, 0.02);
     --highlight-color: rgb(255, 255, 255, 0.2);
     --logo-switch: url(./assets/MoonStars.svg);
     --back-color: rgb(0, 0, 0);
+    --outline: rgba(0, 0, 0, 0.479);
+
+    
 
 }
 
@@ -44,7 +46,7 @@
     background-size: cover; /* Ajuste o tamanho conforme necessário (cover, contain, etc.) */
     position:absolute;
     top: 0;
-    right: 0; /* Permite definir a posição personalizada */
+    right: 0%; /* Permite definir a posição personalizada */
     z-index: 0;
     
 
@@ -156,13 +158,14 @@ ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 20px;
+    padding: 2px 0;
     font-weight:bolder;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.04);
 
     
 
-    padding: 16px 12px;
+    padding: 12px 12px;
 
     background: var(--surface);
     border-radius: 18px;
@@ -180,7 +183,17 @@ ul li a{
 
 ul li a:hover {
     background: var(--surface-hover);
-    border: 1.5px solid var(--text-color);
+    outline: 1.5px solid var(--outline);
+    
+}
+
+ul li a ion-icon {
+     /* Adicione a distância desejada entre o ícone e o texto */
+    font-size: 24px;
+    padding: 0 2.5%;
+    
+    
+    
 }
 
 /*social*/
@@ -192,6 +205,7 @@ ul li a:hover {
     padding: 24px 0px;
 
     font-size: 24px;
+    
 }
 
 #social-links a {
@@ -201,6 +215,14 @@ ul li a:hover {
     padding: 16px;
     transition: background 0.2s;
     border-radius: 50%;
+    
+
+
+}
+
+#social-links a ion-icon {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 
 
 }
@@ -219,15 +241,17 @@ footer{
 /*media queries*/
 
 @media (min-width: 700px) {
-    :root{
-        --bg-url: url( ./assets/bg-desktop.jpg );
 
+    .seu-svg-container {
+    width: 1100px; /* Defina o tamanho desejado para o seu SVG */
+    height: 100vh;
+    background-image: url('./assets/waves2.svg'); /* Substitua 'seu-svg.svg' pelo caminho do seu SVG */
+    background-size: cover; /* Ajuste o tamanho conforme necessário (cover, contain, etc.) */
+    position:absolute;
+    top: 0;
+    right: 10%; /* Permite definir a posição personalizada */
+    z-index: 0;
     }
-
-    .dark {
-        --bg-url: url(black);
-    }
-
 
 }
 
