@@ -8,10 +8,12 @@
     --text-color: white;
     --bg-url: url(./assets/bg-mobile.jpg);
     --stroke-color: rgb(255, 255, 255, 0.5);
-    --surface: rgb(255, 255, 255, 0.1);
+    --surface: rgba(255, 255, 255, 0.048);
     --surface-hover: rgb(0, 0, 0, 0.02);
     --highlight-color: rgb(255, 255, 255, 0.2);
     --logo-switch: url(./assets/MoonStars.svg);
+    --back-color: rgb(0, 0, 0);
+
 
     
 }
@@ -21,18 +23,29 @@
     --text-color: black;
     --bg-url: url(./assets/bg-mobile-light.jpg);
     --stroke-color: rgb(0, 0, 0, 0.5);
-    --surface: rgba(56, 52, 52, 0.09);
+    --surface: rgba(255, 255, 255, 0.39);
     --surface-hover: rgb(0, 0, 0, 0.02);
     --highlight-color: rgb(0, 0, 0, 0.1);
     --logo-switch: url(./assets/Sun.svg);
-
-
-
+    --back-color: white;
 
 }
 
+.seu-svg-container {
+    width: 600px; /* Defina o tamanho desejado para o seu SVG */
+    height: 100vh;
+    background-image: url('./assets/waves2.svg'); /* Substitua 'seu-svg.svg' pelo caminho do seu SVG */
+    background-size: cover; /* Ajuste o tamanho conforme necessário (cover, contain, etc.) */
+    position:absolute;
+    top: 0;
+    right: 0; /* Permite definir a posição personalizada */
+    z-index: 0;
+    
+
+  }
+
 body {
-    background: var(--bg-url) no-repeat top center/cover;
+    background-color: var(--back-color);
     height: 100vh;
 
 }
@@ -40,6 +53,8 @@ body {
 body * {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
+    position: relative;
+
 }
 
 /*profile*/
@@ -49,12 +64,15 @@ body * {
     max-width: 588px;
     margin: 56px auto 0px;
     padding: 0 24px;
+    
+    
  
 }
 
 #profile{
     text-align: center;
     padding: 24px;
+    position: relative;
 }
 
 #profile img{
@@ -122,6 +140,9 @@ ul{
     flex-direction: column;
     gap: 16px;
     padding: 24px 0;
+    max-width: 30vh;
+    margin: auto;
+
     
 }
 
@@ -131,13 +152,14 @@ ul li a{
     align-items: center;
     font-size: 18px;
     font-weight:bolder;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.04);
+
     
 
-    padding: 16px 24px;
+    padding: 16px 12px;
 
     background: var(--surface);
-    border: 1px solid var(--stroke-color);
-    border-radius: 8px;
+    border-radius: 18px;
 
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(8px);
@@ -197,7 +219,7 @@ footer{
     }
 
     .dark {
-        --bg-url: url( ./assets/bg-desktop-light.jpg );
+        --bg-url: url(black);
     }
 
 
